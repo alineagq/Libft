@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 15:06:40 by aqueiroz          #+#    #+#              #
-#    Updated: 2022/09/11 19:30:45 by coder            ###   ########.fr        #
+#    Updated: 2022/09/12 00:41:38 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ $(NAME): $(OBJS)
 	@ar rc $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-	@cc $(GCCFLAGS) -g3 -I $(PATH_INCLUDE) -c $(SRCS)
+	@cc $(GCCFLAGS) -I $(PATH_INCLUDE) -c $(SRCS)
 
 clean:
 	@rm -f $(OBJS) $(BONUS_OBJS)
