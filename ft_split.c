@@ -3,31 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aqueiroz <aqueiroz@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 19:09:57 by aqueiroz          #+#    #+#             */
-/*   Updated: 2022/09/10 19:59:05 by aqueiroz         ###   ########.fr       */
+/*   Updated: 2022/09/12 00:06:40 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_size(char *s, char c)
 {
-	size_t	i;
 	int		times;
+	size_t	i;
 
 	i = 0;
 	times = 0;
-	while (s[i++])
+	if (ft_strlen(s) == 0)
+		return (0);
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
 	{
-		if (s[i] == c && (i != ft_strlen(s) - 1) && (s[i + 1] != c))
+		if (s[i] == c)
+		{
 			times++;
+			while (s[i] && s[i] == c)
+				i++;
+			continue ;
+		}
+		i++;
 	}
-	if (times)
-		times++;
-	if (!(ft_strchr(s + 0, c)))
+	if (s[i - 1] != c)
 		times++;
 	return (times);
 }
@@ -63,7 +70,7 @@ char	**ft_split(char const *s, char c)
 	size_t	index;
 
 	tab = (char **)malloc((ft_size((char *)s, c) + 1) * sizeof(char *));
-	if (!tab || !s)
+	if (!tab)
 		return (NULL);
 	start = 0;
 	index = 0;

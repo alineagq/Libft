@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aqueiroz <aqueiroz@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 11:24:09 by aqueiroz          #+#    #+#             */
-/*   Updated: 2022/09/02 21:06:23 by aqueiroz         ###   ########.fr       */
+/*   Updated: 2022/09/11 17:45:00 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			((char *)dst)[len] = ((char *)src)[len];
 	}
 	else
-	{
 		ft_memcpy(dst, src, len);
-	}
 	return (dst);
 }
