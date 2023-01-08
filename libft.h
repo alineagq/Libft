@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aqueiroz <aqueiroz@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:59:16 by aqueiroz          #+#    #+#             */
-/*   Updated: 2022/09/11 17:04:38 by coder            ###   ########.fr       */
+/*   Updated: 2023/01/08 03:19:25 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <limits.h>
 # include <unistd.h>
-# include <stdint.h>
+# include <fcntl.h>
+
+# define SIZE_MAX 2147483647
+# define BUFFER_SIZE 1
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }t_list;
+
+// LIBFT FUNCTIONS
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -53,7 +57,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
@@ -67,5 +71,12 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// GNL FUNCTIONS
+
+char	*alloc_buffer(int fd, char *buffer);
+char	*alloc_line(char *buffer);
+char	*update_buffer(char *buffer);
+char	*get_next_line(int fd);
 
 #endif

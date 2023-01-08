@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
+#    By: aqueiroz <aqueiroz@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 15:06:40 by aqueiroz          #+#    #+#              #
-#    Updated: 2022/09/12 00:41:38 by coder            ###   ########.fr        #
+#    Updated: 2023/01/08 03:15:13 by aqueiroz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = $(addprefix $(PATH_SRC), \
     ft_strdup.c ft_strncmp.c ft_tolower.c ft_toupper.c ft_memchr.c ft_memcmp.c \
 	ft_strlcat.c ft_strlcpy.c ft_strchr.c ft_strrchr.c ft_strnstr.c ft_putchar_fd.c \
 	ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c ft_striteri.c ft_substr.c ft_strjoin.c \
-	ft_itoa.c ft_strmapi.c ft_strtrim.c ft_split.c)
+	ft_itoa.c ft_strmapi.c ft_strtrim.c ft_split.c get_next_line.c)
 
 OBJS := ${SRCS:.c=.o}
 
