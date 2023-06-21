@@ -9,7 +9,9 @@
 Prototype:
 	int ft_isalpha(int c)
 	
-This function determines if a given character is alphabetic by checking if it falls within the range of uppercase or lowercase letters and returns 1 if it is alphabetic, and 0 if it is not.
+This function determines if a given character is alphabetic by checking
+if it falls within the range of uppercase or lowercase letters and returns
+1 if it is alphabetic, and 0 if it is not.
 ```
 </details>
 
@@ -20,6 +22,20 @@ This function determines if a given character is alphabetic by checking if it fa
 Prototype:
 	int ft_isdigit(int c)
 	
-This function determines if a given character is digit and returns 1 if it is digit, and 0 if it is not.
+This function determines if a given character is digit and returns 1 if
+it is digit, and 0 if it is not.
+```
+</details>
+
+<details>
+<summary>ft_isalnum</summary>
+
+```
+Prototype:
+	int ft_isalnum(int c)
+	
+This function determines if a given character is alphanumeric (either an
+alphabetic character or a digit) and returns 1 if it is alphanumeric,
+and 0 if it is not.
 ```
 </details>
