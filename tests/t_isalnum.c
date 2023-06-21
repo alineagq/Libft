@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_isdigit.c                                        :+:      :+:    :+:   */
+/*   t_isalnum.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 14:33:28 by aqueiroz          #+#    #+#             */
-/*   Updated: 2023/06/20 21:34:57 by aqueiroz         ###   ########.fr       */
+/*   Created: 2023/06/20 21:09:41 by aqueiroz          #+#    #+#             */
+/*   Updated: 2023/06/20 21:35:28 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-void t_isdigit(void)
+void t_isalnum(void)
 {
 	char** stringArray = NULL;
     int arraySize = 0;
@@ -20,26 +20,33 @@ void t_isdigit(void)
 	
     printf("> Testing: %s\n", __FILE__);
 
-    // Test digits
-    assert(ft_isdigit('0') == 1);
-    assert(ft_isdigit('1') == 1);
-    assert(ft_isdigit('9') == 1);
+    // Test with alphanumeric characters
+    assert(ft_isalnum('a') == 1);
+    assert(ft_isalnum('A') == 1);
+    assert(ft_isalnum('5') == 1);
 
-    // Test non-digit characters
-    assert(ft_isdigit('A') == 0);
-    assert(ft_isdigit('B') == 0);
-    assert(ft_isdigit('z') == 0);
-    assert(ft_isdigit('$') == 0);
-    assert(ft_isdigit('@') == 0);
-    assert(ft_isdigit(' ') == 0);
-    assert(ft_isdigit('\n') == 0);
+    // Test with non-alphanumeric characters
+    assert(ft_isalnum('$') == 0);
+    assert(ft_isalnum('!') == 0);
+    assert(ft_isalnum(' ') == 0);
 
-    // Test out-of-range characters
-    assert(ft_isdigit(200) == 0);
-    assert(ft_isdigit(-50) == 0);
+    // Test with special characters
+    assert(ft_isalnum('\0') == 0);       // Null character
+    assert(ft_isalnum('\n') == 0);       // Newline character
+    assert(ft_isalnum('\t') == 0);       // Tab character
 
+    // Test with extended ASCII characters
+    assert(ft_isalnum(128) == 0);        // Ç
+    assert(ft_isalnum(255) == 0);        // ÿ
+
+    // Test with negative values
+    assert(ft_isalnum(-1) == 0);
+    assert(ft_isalnum(-128) == 0);
+
+    // Test with maximum positive value
+    assert(ft_isalnum(127) == 0);
     if (arraySize != 0)
-        printf("\n%d", arraySize);
+        printf("\n");
     for (int i = 0; i < arraySize; i++) {
         printf("\033[0mError %d: %s\n", i + 1, stringArray[i]);
     }

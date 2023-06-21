@@ -6,7 +6,7 @@
 /*   By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 14:33:28 by aqueiroz          #+#    #+#             */
-/*   Updated: 2023/06/20 20:40:36 by aqueiroz         ###   ########.fr       */
+/*   Updated: 2023/06/20 21:35:29 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void t_isalpha(void)
     int arraySize = 0;
     int counter = 1;
 	
-    printf("Testing: %s\n", __FILE__);
+    printf("> Testing: %s\n", __FILE__);
 
     // Test uppercase letters
     assert(ft_isalpha('A') == 1);
@@ -42,7 +42,8 @@ void t_isalpha(void)
     assert(ft_isalpha(200) == 0);
     assert(ft_isalpha(-50) == 0);
 
-    printf("\n");
+    if (arraySize != 0)
+        printf("\n");
     for (int i = 0; i < arraySize; i++) {
         printf("\033[0mError %d: %s\n", i + 1, stringArray[i]);
     }

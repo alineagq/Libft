@@ -6,7 +6,7 @@
 #    By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/20 09:14:27 by aqueiroz          #+#    #+#              #
-#    Updated: 2023/06/20 20:53:34 by aqueiroz         ###   ########.fr        #
+#    Updated: 2023/06/20 21:19:00 by aqueiroz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ PATH_INC = ./
 # FILES
 
 NAME = libft.a
-FILES = ft_isalpha ft_isdigit
+FILES = ft_isalpha ft_isdigit ft_isalnum
 SRCS = $(addprefix $(SRC_PATH)/, $(addsuffix .c, $(FILES)))
 OBJS := ${SRCS:.c=.o}
 

@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 15:54:41 by aqueiroz          #+#    #+#             */
-/*   Updated: 2023/06/20 21:30:08 by aqueiroz         ###   ########.fr       */
+/*   Created: 2023/06/20 21:08:22 by aqueiroz          #+#    #+#             */
+/*   Updated: 2023/06/20 21:09:08 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "../libft.h"
 
-int	main(void)
+int	ft_isalnum(int c)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
 	return (0);
 }
