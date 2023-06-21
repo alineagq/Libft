@@ -6,7 +6,7 @@
 /*   By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 15:54:41 by aqueiroz          #+#    #+#             */
-/*   Updated: 2023/06/20 15:55:28 by aqueiroz         ###   ########.fr       */
+/*   Updated: 2023/06/20 19:09:55 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 int	main(void)
 {
 	t_isalpha();
+	t_isdigit();
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/20 09:14:27 by aqueiroz          #+#    #+#              #
-#    Updated: 2023/06/20 18:27:59 by aqueiroz         ###   ########.fr        #
+#    Updated: 2023/06/20 20:53:34 by aqueiroz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ PATH_INC = ./
 # FILES
 
 NAME = libft.a
-FILES = ft_isalpha
+FILES = ft_isalpha ft_isdigit
 SRCS = $(addprefix $(SRC_PATH)/, $(addsuffix .c, $(FILES)))
 OBJS := ${SRCS:.c=.o}
 
@@ -60,11 +60,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 
-$(OBJS): $(SRCS)
+%.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 test: $(NAME)
-	@$(CC) $(CFLAGS) -I ./ -I tests tests/*.c -L ./ -lft -o test
+	@$(CC) $(CFLAGS) -I tests tests/*.c -L ./ -lft -o test
 	@./test
 
 clean:

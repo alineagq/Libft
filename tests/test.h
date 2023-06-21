@@ -6,7 +6,7 @@
 /*   By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 11:44:06 by aqueiroz          #+#    #+#             */
-/*   Updated: 2023/06/20 18:06:25 by aqueiroz         ###   ########.fr       */
+/*   Updated: 2023/06/20 19:57:53 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include "../libft.h"
+
+extern int counter;
+extern int result;
 
 # ifdef NDEBUG
 #  define assert(expression) ((void)0)
@@ -43,5 +47,6 @@
 void push_str(char*** array, int* size, const char* string);
 
 void t_isalpha(void);
+void t_isdigit(void);
 
 #endif
