@@ -6,7 +6,7 @@
 /*   By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 11:44:06 by aqueiroz          #+#    #+#             */
-/*   Updated: 2023/06/22 09:57:07 by aqueiroz         ###   ########.fr       */
+/*   Updated: 2023/06/28 15:49:23 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ void t_isalnum(void);
 void t_isascii(void);
 void t_isprint(void);
 void t_strlen(void);
+void t_memset(void);
 
 #endif

@@ -6,13 +6,11 @@
 /*   By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 09:42:05 by aqueiroz          #+#    #+#             */
-/*   Updated: 2023/06/22 09:42:13 by aqueiroz         ###   ########.fr       */
+/*   Updated: 2023/06/28 15:43:02 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }

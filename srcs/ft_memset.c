@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aqueiroz <aqueiroz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 15:54:41 by aqueiroz          #+#    #+#             */
-/*   Updated: 2023/06/28 15:49:45 by aqueiroz         ###   ########.fr       */
+/*   Created: 2023/06/24 11:04:09 by aqueiroz          #+#    #+#             */
+/*   Updated: 2023/06/28 15:47:57 by aqueiroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "../libft.h"
 
-int	main(void)
+void	*ft_memset(void *ptr, int value, size_t num)
 {
-	t_isalpha();
-	t_isdigit();
-	t_isalnum();
-	t_isascii();
-	t_isprint();
-	t_strlen();
-	t_memset();
-	return (0);
+	unsigned char	*p;
+	unsigned char	val;
+
+	p = ptr;
+	val = (unsigned char)value;
+	while (num-- > 0)
+		*p++ = val;
+	return (ptr);
 }
